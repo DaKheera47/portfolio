@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-color: #646464 #f1f1f1;
+    scrollbar-width: thin;
+}
+
+body::-webkit-scrollbar {
+    width: 9px;
+    background-color: #f1f1f1;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #646464;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background: #f1f1f1;
+    background-image: url("Lines1.png"), url("Lines2.png"), url("Lines3.png");
+    background-repeat: repeat-y;
+    letter-spacing: -0.05em;
+    padding: 0;
+    margin: 0;
+}
+
+.central-container {
+    margin-top: 25vh;
+    font-size: 80px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.static-text {
+    margin: 0;
+    height: 2em;
+}
+
+.changing-text {
+    text-transform: uppercase;
+    display: block;
+}
+
+.download-resume-btn {
+    display: block;
+    width: 363px;
+    height: 66px;
+    border: 2px solid black;
+    font-family: "Montserrat", sans-serif;
+    font-size: 27px;
+    margin: 100px auto;
+    cursor: pointer;
+}
+
+.arrow-container {
+    display: flex;
+    justify-content: center;
+}
+
+.down-arrow {
+    position: absolute;
+    top: 85vh;
+    cursor: pointer;
+}
+
+.section-header {
+    font-size: 100px;
+    width: 99vw;
+    text-align: center;
+    margin: 55px 0;
+    text-transform: uppercase;
+}
+
+.projects-container {
+    margin-top: 300px;
+    width: 99vw;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.circle {
+    border-radius: 50%;
+    height: 75px;
+    width: 75px;
+    background-color: #646464;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-container {
+    margin-bottom: 50px;
+}
+
+.content-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.content-card-text {
+    width: 100%;
+    letter-spacing: normal;
+    color: black;
+    text-decoration: none;
+    margin: 15px 0;
+}
+
+.contact-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 75vw;
+    margin: 0 auto;
+}
+
+/* card css */
+.project-card {
+    background: rgb(100, 100, 100, 0.25);
+    width: 368px;
+    margin: 0 40px;
+    margin-bottom: 50px;
+    padding: 40px;
+}
+
+.card-title {
+    font-variant: small-caps;
+    font-size: 40px;
+    margin: 0;
+}
+
+.card-content {
+    font-size: 20px;
+    line-height: 1.7rem;
+}
+
+.card-button {
+    border-radius: 4px;
+    border: 2px solid #3f3f3f;
+    width: 160px;
+    height: 45px;
+    font-size: 18px;
+    font-weight: 400;
+    background: none;
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 500px) {
+    body {
+        padding: 0 10px;
+    }
+
+    .section-header {
+        font-size: 55px;
+        width: 100%;
+    }
+
+    .circle {
+        margin-top: 30px;
+    }
+
+    .central-container {
+        width: 90vw;
+        margin-left: 10px;
+        margin-top: 30vh;
+        font-size: 40px;
+    }
+
+    .static-text {
+        width: 90vw;
+    }
+
+    .projects-container {
+        width: 95vw;
+        margin: 0 auto;
+        margin-top: 450px;
+    }
+
+    .download-resume-btn {
+        display: none;
+    }
+
+    .project-card {
+        width: 90vw;
+        margin: 0 20px;
+        margin-bottom: 30px;
+        padding: 25px 30px;
+    }
+
+    .card-button {
+        width: 120px;
+        height: 35px;
+        font-size: 18px;
+    }
+}
