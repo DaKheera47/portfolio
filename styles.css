@@ -43,7 +43,9 @@ body {
 }
 
 .download-resume-btn {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 363px;
     height: 66px;
     border: 2px solid black;
@@ -51,6 +53,11 @@ body {
     font-size: 27px;
     margin: 100px auto;
     cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+
+    transition: all 150ms;
 }
 
 .arrow-container {
@@ -68,7 +75,8 @@ body {
     font-size: 100px;
     width: 99vw;
     text-align: center;
-    margin: 55px 0;
+    margin: 50px 0;
+    margin-top: 75px;
     text-transform: uppercase;
 }
 
@@ -126,6 +134,7 @@ body {
     margin: 0 40px;
     margin-bottom: 50px;
     padding: 40px;
+    border-radius: 5px;
 }
 
 .card-title {
@@ -153,6 +162,20 @@ body {
     align-items: center;
     color: black;
     text-decoration: none;
+    cursor: pointer;
+
+    transition: all 150ms;
+}
+
+.card-button:hover {
+    background: #646464;
+    border-color: #646464;
+    color: white;
+}
+
+.download-resume-btn:hover {
+    background: #000000;
+    color: white;
 }
 
 @media only screen and (max-width: 500px) {
