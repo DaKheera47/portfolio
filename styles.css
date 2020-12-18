@@ -73,7 +73,7 @@ body {
 
 .section-header {
     font-size: 100px;
-    width: 99vw;
+    width: 100%;
     text-align: center;
     margin: 50px 0;
     margin-top: 75px;
@@ -82,7 +82,7 @@ body {
 
 .projects-container {
     margin-top: 300px;
-    width: 99vw;
+    width: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -176,6 +176,18 @@ body {
 .download-resume-btn:hover {
     background: #000000;
     color: white;
+}
+
+@media only screen and (min-width: 500px) and (max-width: 1024px) {
+
+    .arrow-container {
+        display: none;
+    }
+
+    .central-container {
+        margin-top: 13vh;
+    }
+
 }
 
 @media only screen and (max-width: 500px) {
