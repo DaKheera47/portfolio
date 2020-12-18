@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 
 html {
+    --accent-col: #f1bd13;
+    --main-bg-col: #1f1f1f;
     scroll-behavior: smooth;
-    scrollbar-color: #646464 #f1f1f1;
+    scrollbar-color: var(--accent-col) var(--main-bg-col);
     scrollbar-width: thin;
 }
 
@@ -12,17 +14,16 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: #646464;
+    background-color: var(--accent-col);
 }
 
 body {
     font-family: "Montserrat", sans-serif;
-    background: #f1f1f1;
-    background-image: url("Lines1.png"), url("Lines2.png"), url("Lines3.png");
-    background-repeat: repeat-y;
+    background: var(--main-bg-col);
     letter-spacing: -0.05em;
     padding: 0;
     margin: 0;
+    color: var(--accent-col) !important;
 }
 
 .central-container {
@@ -48,14 +49,15 @@ body {
     align-items: center;
     width: 363px;
     height: 66px;
-    border: 2px solid black;
+    border: 3px solid var(--accent-col);
     font-family: "Montserrat", sans-serif;
     font-size: 27px;
+    font-weight: 600;
     margin: 100px auto;
     cursor: pointer;
     border-radius: 5px;
     text-decoration: none;
-    color: black;
+    color: var(--accent-col);
 
     transition: all 150ms;
 }
@@ -92,7 +94,7 @@ body {
     border-radius: 50%;
     height: 75px;
     width: 75px;
-    background-color: #646464;
+    background-color: var(--accent-col);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -113,7 +115,7 @@ body {
 .content-card-text {
     width: 100%;
     letter-spacing: normal;
-    color: black;
+    color: var(--accent-col);
     text-decoration: none;
     margin: 15px 0;
 }
@@ -150,7 +152,7 @@ body {
 
 .card-button {
     border-radius: 4px;
-    border: 2px solid #3f3f3f;
+    border: 2px solid var(--accent-col);
     width: 160px;
     height: 45px;
     font-size: 18px;
@@ -160,7 +162,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: black;
+    color: var(--accent-col);
     text-decoration: none;
     cursor: pointer;
 
@@ -168,18 +170,17 @@ body {
 }
 
 .card-button:hover {
-    background: #646464;
-    border-color: #646464;
-    color: white;
+    background: var(--accent-col);
+    border-color: var(--accent-col);
+    color: var(--main-bg-col);
 }
 
 .download-resume-btn:hover {
-    background: #000000;
-    color: white;
+    background: var(--accent-col);
+    color: var(--main-bg-col);
 }
 
 @media only screen and (min-width: 500px) and (max-width: 1024px) {
-
     .arrow-container {
         display: none;
     }
@@ -187,7 +188,6 @@ body {
     .central-container {
         margin-top: 13vh;
     }
-
 }
 
 @media only screen and (max-width: 500px) {
