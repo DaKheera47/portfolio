@@ -17,135 +17,143 @@ function scroller() {
 }
 
 (function () {
-    /* Store the element in el */
-    let el = document.getElementsByClassName("tilt")[0];
+    const mediaQuery = window.matchMedia("(min-width: 768px)");
 
-    /* Get the height and width of the element */
-    const height = el.clientHeight;
-    const width = el.clientWidth;
+    if (mediaQuery.matches) {
+        /* Store the element in el */
+        let el = document.getElementsByClassName("tilt")[0];
 
-    /*
-     * Add a listener for mousemove event
-     * Which will trigger function 'handleMove'
-     * On mousemove
-     */
-    el.addEventListener("mousemove", handleMove);
-
-    /* Define function a */
-    function handleMove(e) {
-        /*
-         * Get position of mouse cursor
-         * With respect to the element
-         * On mouseover
-         */
-        /* Store the x position */
-        const xVal = e.layerX;
-        /* Store the y position */
-        const yVal = e.layerY;
+        /* Get the height and width of the element */
+        const height = el.clientHeight;
+        const width = el.clientWidth;
 
         /*
-         * Calculate rotation valuee along the Y-axis
-         * Here the multiplier 20 is to
-         * Control the rotation
-         * You can change the value and see the results
+         * Add a listener for mousemove event
+         * Which will trigger function 'handleMove'
+         * On mousemove
          */
-        const yRotation = 5 * ((xVal - width / 2) / width);
+        el.addEventListener("mousemove", handleMove);
 
-        /* Calculate the rotation along the X-axis */
-        const xRotation = -5 * ((yVal - height / 2) / height);
+        /* Define function a */
+        function handleMove(e) {
+            /*
+             * Get position of mouse cursor
+             * With respect to the element
+             * On mouseover
+             */
+            /* Store the x position */
+            const xVal = e.layerX;
+            /* Store the y position */
+            const yVal = e.layerY;
 
-        /* Generate string for CSS transform property */
-        const string =
-            "perspective(500px) rotateX(" +
-            xRotation +
-            "deg) rotateY(" +
-            yRotation +
-            "deg)";
+            /*
+             * Calculate rotation valuee along the Y-axis
+             * Here the multiplier 20 is to
+             * Control the rotation
+             * You can change the value and see the results
+             */
+            const yRotation = 5 * ((xVal - width / 2) / width);
 
-        /* Apply the calculated transformation */
-        el.style.transform = string;
+            /* Calculate the rotation along the X-axis */
+            const xRotation = -5 * ((yVal - height / 2) / height);
+
+            /* Generate string for CSS transform property */
+            const string =
+                "perspective(500px) rotateX(" +
+                xRotation +
+                "deg) rotateY(" +
+                yRotation +
+                "deg)";
+
+            /* Apply the calculated transformation */
+            el.style.transform = string;
+        }
+
+        /* Add listener for mouseout event, remove the rotation */
+        el.addEventListener("mouseout", function () {
+            el.style.transform = "perspective(200px) rotateX(0) rotateY(0)";
+        });
+
+        /* Add listener for mousedown event, to simulate click */
+        el.addEventListener("mousedown", function () {
+            el.style.transform = "perspective(200px) rotateX(0) rotateY(0)";
+        });
+
+        /* Add listener for mouseup, simulate release of mouse click */
+        el.addEventListener("mouseup", function () {
+            el.style.transform = "perspective(200px) rotateX(0) rotateY(0)";
+        });
     }
-
-    /* Add listener for mouseout event, remove the rotation */
-    el.addEventListener("mouseout", function () {
-        el.style.transform = "perspective(200px) rotateX(0) rotateY(0)";
-    });
-
-    /* Add listener for mousedown event, to simulate click */
-    el.addEventListener("mousedown", function () {
-        el.style.transform = "perspective(200px) rotateX(0) rotateY(0)";
-    });
-
-    /* Add listener for mouseup, simulate release of mouse click */
-    el.addEventListener("mouseup", function () {
-        el.style.transform = "perspective(200px) rotateX(0) rotateY(0)";
-    });
 })();
 
 (function () {
-    /* Store the element in el */
-    let el = document.getElementsByClassName("tilt")[1];
+    const mediaQuery = window.matchMedia("(min-width: 768px)");
 
-    /* Get the height and width of the element */
-    const height = el.clientHeight;
-    const width = el.clientWidth;
+    if (mediaQuery.matches) {
+        /* Store the element in el */
+        let el = document.getElementsByClassName("tilt")[1];
 
-    /*
-     * Add a listener for mousemove event
-     * Which will trigger function 'handleMove'
-     * On mousemove
-     */
-    el.addEventListener("mousemove", handleMove);
-
-    /* Define function a */
-    function handleMove(e) {
-        /*
-         * Get position of mouse cursor
-         * With respect to the element
-         * On mouseover
-         */
-        /* Store the x position */
-        const xVal = e.layerX;
-        /* Store the y position */
-        const yVal = e.layerY;
+        /* Get the height and width of the element */
+        const height = el.clientHeight;
+        const width = el.clientWidth;
 
         /*
-         * Calculate rotation valuee along the Y-axis
-         * Here the multiplier 20 is to
-         * Control the rotation
-         * You can change the value and see the results
+         * Add a listener for mousemove event
+         * Which will trigger function 'handleMove'
+         * On mousemove
          */
-        const yRotation = 5 * ((xVal - width / 2) / width);
+        el.addEventListener("mousemove", handleMove);
 
-        /* Calculate the rotation along the X-axis */
-        const xRotation = -5 * ((yVal - height / 2) / height);
+        /* Define function a */
+        function handleMove(e) {
+            /*
+             * Get position of mouse cursor
+             * With respect to the element
+             * On mouseover
+             */
+            /* Store the x position */
+            const xVal = e.layerX;
+            /* Store the y position */
+            const yVal = e.layerY;
 
-        /* Generate string for CSS transform property */
-        const string =
-            "perspective(500px) rotateX(" +
-            xRotation +
-            "deg) rotateY(" +
-            yRotation +
-            "deg)";
+            /*
+             * Calculate rotation valuee along the Y-axis
+             * Here the multiplier 20 is to
+             * Control the rotation
+             * You can change the value and see the results
+             */
+            const yRotation = 5 * ((xVal - width / 2) / width);
 
-        /* Apply the calculated transformation */
-        el.style.transform = string;
+            /* Calculate the rotation along the X-axis */
+            const xRotation = -5 * ((yVal - height / 2) / height);
+
+            /* Generate string for CSS transform property */
+            const string =
+                "perspective(500px) rotateX(" +
+                xRotation +
+                "deg) rotateY(" +
+                yRotation +
+                "deg)";
+
+            /* Apply the calculated transformation */
+            el.style.transform = string;
+        }
+
+        /* Add listener for mouseout event, remove the rotation */
+        el.addEventListener("mouseout", function () {
+            el.style.transform = "perspective(500px) rotateX(0) rotateY(0)";
+        });
+
+        /* Add listener for mousedown event, to simulate click */
+        el.addEventListener("mousedown", function () {
+            el.style.transform = "perspective(500px) rotateX(0) rotateY(0)";
+        });
+
+        /* Add listener for mouseup, simulate release of mouse click */
+        el.addEventListener("mouseup", function () {
+            el.style.transform = "perspective(500px) rotateX(0) rotateY(0)";
+        });
     }
-
-    /* Add listener for mouseout event, remove the rotation */
-    el.addEventListener("mouseout", function () {
-        el.style.transform = "perspective(500px) rotateX(0) rotateY(0)";
-    });
-
-    /* Add listener for mousedown event, to simulate click */
-    el.addEventListener("mousedown", function () {
-        el.style.transform = "perspective(500px) rotateX(0) rotateY(0)";
-    });
-
-    /* Add listener for mouseup, simulate release of mouse click */
-    el.addEventListener("mouseup", function () {
-        el.style.transform = "perspective(500px) rotateX(0) rotateY(0)";
-    });
 })();
 
 let optionCounter = 0;
