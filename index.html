@@ -21,34 +21,56 @@
     </a>
 
     <div class="arrow-container">
-        <img class="down-arrow" src="DownArrow.png" alt="downwards arrow" onclick="scroller()">
+        <svg width="23" height="33" class="down-arrow" viewBox="0 0 23 33" fill="#f1bd13"
+            xmlns="http://www.w3.org/2000/svg" onclick="scroller()">
+            <g clip-path="url(#clip0)">
+                <path
+                    d="M11.7365 32.6948L27.3615 17.0698C27.7685 16.6629 27.7685 16.0037 27.3615 15.5969C26.9546 15.1899 26.2954 15.1899 25.8886 15.5969L12.0417 29.4438L12.0417 -15.9583C12.0417 -16.5341 11.5758 -17 11 -17C10.4242 -17 9.95833 -16.5341 9.95833 -15.9583L9.95833 29.4438L-3.88845 15.5969C-4.29538 15.1899 -4.95456 15.1899 -5.3614 15.5969C-5.56481 15.8003 -5.66657 16.0669 -5.66657 16.3334C-5.66657 16.5999 -5.56481 16.8664 -5.3614 17.0699L10.2636 32.6949C10.6704 33.1018 11.3296 33.1018 11.7365 32.6948Z"
+                    fill="f1bd13" />
+            </g>
+            <defs>
+                <clipPath id="clip0">
+                    <rect width="33" height="23" fill="#f1bd13" transform="translate(23) rotate(90)" />
+                </clipPath>
+            </defs>
+        </svg>
+
     </div>
 
     <div class="projects-container">
         <p class="section-header">Projects</p>
 
-        <div class="project-card">
-            <p class="card-title">
-                mumtaz urdu
-            </p>
-            <p class="card-content">
-                A project for my mother’s book titled “Mumtaz Urdu”. The main purpose of this website is to serve audio
-                files for tasks found in the book. A unique code will be available in the purchased books, which can be
-                used to access the content.
-            </p>
-            <a target="_blank" href="http://www.mumtazurdu.com" class="card-button">View Project</a>
+        <div class="tilt">
+            <div class="project-card">
+                <p class="card-title">
+                    mumtaz urdu
+                </p>
+                <p class="card-content">
+                    A project for my mother’s book titled “Mumtaz Urdu”. The main purpose of this website is to
+                    serve audio
+                    files for tasks found in the book. A unique code will be available in the purchased books, which
+                    can be
+                    used to access the content.
+                </p>
+                <a target="_blank" href="http://www.mumtazurdu.com" class="card-button">View Project</a>
+            </div>
         </div>
 
-        <div class="project-card">
-            <p class="card-title">
-                eco bank
-            </p>
-            <p class="card-content">
-                A starter project from an idea given to me by the Reddit community. It has full authentication and
-                authorization support, with withdrawl and depostion of (fictional) money. A user can also transfer said
-                currency to other users based on a system of account numbers.
-            </p>
-            <a target="_blank" href="https://eco-bank.herokuapp.com/" class="card-button">View Project</a>
+        <div class="tilt">
+            <div class="project-card">
+                <p class="card-title">
+                    eco bank
+                </p>
+                <p class="card-content">
+                    A starter project from an idea given to me by the Reddit community. It has full authentication
+                    and
+                    authorization support, with withdrawl and depostion of (fictional) money. A user can also
+                    transfer
+                    said
+                    currency to other users based on a system of account numbers.
+                </p>
+                <a target="_blank" href="https://eco-bank.herokuapp.com/" class="card-button">View Project</a>
+            </div>
         </div>
     </div>
 
@@ -63,11 +85,11 @@
                             <g clip-path="url(#clip0)">
                                 <path
                                     d="M28.813 19.582L18 30.3951L7.18698 19.582L9.17578 17.5932L16.5938 25.0112V0H19.4062V25.0112L26.8242 17.5932L28.813 19.582ZM36 33.1875H0V36H36V33.1875Z"
-                                    fill="white" />
+                                    fill="#1f1f1f" />
                             </g>
                             <defs>
                                 <clipPath id="clip0">
-                                    <rect width="36" height="36" fill="white" />
+                                    <rect width="36" height="36" fill="#1f1f1f" />
                                 </clipPath>
                             </defs>
                         </svg>
@@ -84,11 +106,11 @@
                         <g clip-path="url(#clip0)">
                             <path
                                 d="M34.55 11.0426C33.6213 8.86622 32.2958 6.91368 30.6105 5.23937C27.2064 1.85778 22.732 0 17.998 0C17.9587 0 17.9186 0.000274658 17.8793 0.000274658C13.0627 0.0318603 8.54866 1.94101 5.16872 5.37587C1.78961 8.81019 -0.0456545 13.3561 0.000487933 18.1766C0.0466304 22.9669 1.93765 27.4518 5.32555 30.8045C8.71126 34.1553 13.2115 36.0002 17.9996 35.9999H18.0081C21.5158 35.9986 24.9155 34.9867 27.8395 33.0746L26.3003 30.7207C23.8347 32.3333 20.9668 33.1861 18.0068 33.1874C18.0043 33.1874 18.0024 33.1874 17.9999 33.1874C9.70497 33.1874 2.89263 26.4427 2.81298 18.1494C2.77371 14.0817 4.3225 10.2461 7.17345 7.34847C10.0252 4.45028 13.8339 2.83941 17.8977 2.81277C17.931 2.81249 17.9639 2.81249 17.9974 2.81249C21.9833 2.81249 25.7554 4.38079 28.6281 7.23476C31.5683 10.1555 33.1871 14.0273 33.1871 18.1373V18.6679C33.1871 21.0912 31.2156 23.0625 28.7926 23.0625C26.3695 23.0625 24.3981 21.0912 24.3981 18.6679V9.77342H21.5856V11.1939C20.5795 10.5191 19.3699 10.125 18.0699 10.125C14.5807 10.125 11.7418 12.9638 11.7418 16.4531V19.5468C11.7418 23.0361 14.5807 25.875 18.0699 25.875C20.1878 25.875 22.0657 24.8291 23.2151 23.227C24.5379 24.8422 26.5467 25.875 28.7926 25.875C32.7666 25.875 35.9996 22.642 35.9996 18.6679V18.1373C35.9996 15.6838 35.5118 13.2967 34.55 11.0426ZM21.5856 19.5468C21.5856 21.4854 20.0085 23.0625 18.0699 23.0625C16.1314 23.0625 14.5543 21.4854 14.5543 19.5468V16.4531C14.5543 14.5146 16.1314 12.9375 18.0699 12.9375C20.0085 12.9375 21.5856 14.5146 21.5856 16.4531V19.5468Z"
-                                fill="white" />
+                                fill="#1f1f1f" />
                         </g>
                         <defs>
                             <clipPath id="clip0">
-                                <rect width="36" height="36" fill="white" />
+                                <rect width="36" height="36" fill="#1f1f1f" />
                             </clipPath>
                         </defs>
                     </svg>
@@ -105,7 +127,7 @@
                         <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M18.006 35.994H0L2.88023 27.7492C1.00141 24.8425 0.0120897 21.4876 0.0120897 18.0001C0.0120897 13.1937 1.88381 8.67504 5.28235 5.27643C8.68096 1.87783 13.1997 0.00610352 18.006 0.00610352C22.8124 0.00610352 27.3311 1.87783 30.7297 5.27643C34.1283 8.67504 36 13.1937 36 18.0001C36 22.8064 34.1283 27.3251 30.7297 30.7237C27.3311 34.1223 22.8124 35.994 18.006 35.994ZM3.96036 33.1825H18.006C26.3777 33.1825 33.1884 26.3717 33.1884 18.0001C33.1884 9.62844 26.3777 2.81766 18.006 2.81766C9.63443 2.81766 2.82365 9.62844 2.82365 18.0001C2.82365 21.1502 3.77986 24.1715 5.58874 26.7372L6.00541 27.3282L3.96036 33.1825ZM16.6003 18.0001C16.6003 18.7765 17.2296 19.4058 18.006 19.4058C18.7825 19.4058 19.4118 18.7765 19.4118 18.0001C19.4118 17.2236 18.7825 16.5943 18.006 16.5943C17.2296 16.5943 16.6003 17.2236 16.6003 18.0001ZM22.2234 18.0001C22.2234 18.7765 22.8527 19.4058 23.6292 19.4058C24.4056 19.4058 25.0349 18.7765 25.0349 18.0001C25.0349 17.2236 24.4056 16.5943 23.6292 16.5943C22.8527 16.5943 22.2234 17.2236 22.2234 18.0001ZM10.9772 18.0001C10.9772 18.7765 11.6065 19.4058 12.3829 19.4058C13.1593 19.4058 13.7887 18.7765 13.7887 18.0001C13.7887 17.2236 13.1593 16.5943 12.3829 16.5943C11.6065 16.5943 10.9772 17.2236 10.9772 18.0001Z"
-                                fill="white" />
+                                fill="#1f1f1f" />
                         </svg>
                     </a>
                 </div>

@@ -129,14 +129,17 @@ body {
     margin: 0 auto;
 }
 
-/* card css */
 .project-card {
-    background: rgb(100, 100, 100, 0.25);
     width: 368px;
     margin: 0 40px;
     margin-bottom: 50px;
     padding: 40px;
     border-radius: 5px;
+    transition: all ease 0.2s;
+}
+
+.project-card:hover {
+    box-shadow: 0px 0px 50px 5px rgba(0, 0, 0, 0.3);
 }
 
 .card-title {
