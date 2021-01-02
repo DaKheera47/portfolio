@@ -10,7 +10,7 @@ html {
 
 body::-webkit-scrollbar {
     width: 9px;
-    background-color: #f1f1f1;
+    background-color: var(--main-bg-col);
 }
 
 body::-webkit-scrollbar-thumb {
@@ -36,6 +36,10 @@ body {
 .static-text {
     margin: 0;
     height: 2em;
+}
+
+.icon {
+    z-index: -2;
 }
 
 .changing-text {
@@ -130,12 +134,22 @@ body {
 }
 
 .project-card {
-    width: 368px;
-    margin: 0 40px;
-    margin-bottom: 50px;
-    padding: 40px;
+    width: 408px;
     border-radius: 5px;
     transition: all ease 0.2s;
+    padding: 40px;
+}
+
+.tilt {
+    width: 408px;
+    border-radius: 5px;
+    margin: 0 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+
+    transition: all 0.1s ease;
 }
 
 .project-card:hover {

@@ -5,7 +5,7 @@ const projectsContainer = document.getElementsByClassName(
 )[0];
 const totalOptions = [
     "shaheer sarfaraz",
-    "a student",
+    "in AS level",
     "A web developer",
     "A designer",
 ];
