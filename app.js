@@ -1,13 +1,14 @@
 const textToChange = document.getElementsByClassName("changing-text");
 const staticText = document.getElementsByClassName("static-text");
-const projectsContainer = document.getElementsByClassName(
-    "projects-container"
-)[0];
+const projectsContainer =
+    document.getElementsByClassName("projects-container")[0];
 const totalOptions = [
     "shaheer sarfaraz",
-    "in AS level",
-    "A web developer",
-    "A designer",
+    "A member of project mirage",
+    "A Full stack developer",
+    "A team lead",
+    "A React developer",
+    "A WordPress developer",
 ];
 
 let i = 0;
@@ -15,146 +16,6 @@ let i = 0;
 function scroller() {
     projectsContainer.scrollIntoView(true);
 }
-
-(function () {
-    const mediaQuery = window.matchMedia("(min-width: 768px)");
-
-    if (mediaQuery.matches) {
-        /* Store the element in el */
-        let el = document.getElementsByClassName("tilt")[0];
-
-        /* Get the height and width of the element */
-        const height = el.clientHeight;
-        const width = el.clientWidth;
-
-        /*
-         * Add a listener for mousemove event
-         * Which will trigger function 'handleMove'
-         * On mousemove
-         */
-        el.addEventListener("mousemove", handleMove);
-
-        /* Define function a */
-        function handleMove(e) {
-            /*
-             * Get position of mouse cursor
-             * With respect to the element
-             * On mouseover
-             */
-            /* Store the x position */
-            const xVal = e.layerX;
-            /* Store the y position */
-            const yVal = e.layerY;
-
-            /*
-             * Calculate rotation valuee along the Y-axis
-             * Here the multiplier 20 is to
-             * Control the rotation
-             * You can change the value and see the results
-             */
-            const yRotation = 5 * ((xVal - width / 2) / width);
-
-            /* Calculate the rotation along the X-axis */
-            const xRotation = -5 * ((yVal - height / 2) / height);
-
-            /* Generate string for CSS transform property */
-            const string =
-                "perspective(500px) rotateX(" +
-                xRotation +
-                "deg) rotateY(" +
-                yRotation +
-                "deg)";
-
-            /* Apply the calculated transformation */
-            el.style.transform = string;
-        }
-
-        /* Add listener for mouseout event, remove the rotation */
-        el.addEventListener("mouseout", function () {
-            el.style.transform = "perspective(200px) rotateX(0) rotateY(0)";
-        });
-
-        /* Add listener for mousedown event, to simulate click */
-        el.addEventListener("mousedown", function () {
-            el.style.transform = "perspective(200px) rotateX(0) rotateY(0)";
-        });
-
-        /* Add listener for mouseup, simulate release of mouse click */
-        el.addEventListener("mouseup", function () {
-            el.style.transform = "perspective(200px) rotateX(0) rotateY(0)";
-        });
-    }
-})();
-
-(function () {
-    const mediaQuery = window.matchMedia("(min-width: 768px)");
-
-    if (mediaQuery.matches) {
-        /* Store the element in el */
-        let el = document.getElementsByClassName("tilt")[1];
-
-        /* Get the height and width of the element */
-        const height = el.clientHeight;
-        const width = el.clientWidth;
-
-        /*
-         * Add a listener for mousemove event
-         * Which will trigger function 'handleMove'
-         * On mousemove
-         */
-        el.addEventListener("mousemove", handleMove);
-
-        /* Define function a */
-        function handleMove(e) {
-            /*
-             * Get position of mouse cursor
-             * With respect to the element
-             * On mouseover
-             */
-            /* Store the x position */
-            const xVal = e.layerX;
-            /* Store the y position */
-            const yVal = e.layerY;
-
-            /*
-             * Calculate rotation valuee along the Y-axis
-             * Here the multiplier 20 is to
-             * Control the rotation
-             * You can change the value and see the results
-             */
-            const yRotation = 5 * ((xVal - width / 2) / width);
-
-            /* Calculate the rotation along the X-axis */
-            const xRotation = -5 * ((yVal - height / 2) / height);
-
-            /* Generate string for CSS transform property */
-            const string =
-                "perspective(500px) rotateX(" +
-                xRotation +
-                "deg) rotateY(" +
-                yRotation +
-                "deg)";
-
-            /* Apply the calculated transformation */
-            el.style.transform = string;
-        }
-
-        /* Add listener for mouseout event, remove the rotation */
-        el.addEventListener("mouseout", function () {
-            el.style.transform = "perspective(500px) rotateX(0) rotateY(0)";
-        });
-
-        /* Add listener for mousedown event, to simulate click */
-        el.addEventListener("mousedown", function () {
-            el.style.transform = "perspective(500px) rotateX(0) rotateY(0)";
-        });
-
-        /* Add listener for mouseup, simulate release of mouse click */
-        el.addEventListener("mouseup", function () {
-            el.style.transform = "perspective(500px) rotateX(0) rotateY(0)";
-        });
-    }
-})();
 
 let optionCounter = 0;
 

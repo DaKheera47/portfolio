@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 
 html {
-    --accent-col: #f1bd13;
-    --main-bg-col: #1f1f1f;
+    --accent-col: #f2aa4c;
+    --main-bg-col: #333333;
     scroll-behavior: smooth;
     scrollbar-color: var(--accent-col) var(--main-bg-col);
     scrollbar-width: thin;
@@ -24,6 +24,7 @@ body {
     padding: 0;
     margin: 0;
     color: var(--accent-col) !important;
+    overflow-x: hidden;
 }
 
 .central-container {
@@ -62,6 +63,7 @@ body {
     border-radius: 5px;
     text-decoration: none;
     color: var(--accent-col);
+    background-color: var(--main-bg-col);
 
     transition: all 150ms;
 }
@@ -69,12 +71,17 @@ body {
 .arrow-container {
     display: flex;
     justify-content: center;
+    position: absolute;
+    width: 100vw;
+    flex-wrap: wrap;
+    top: 80vh;
 }
 
 .down-arrow {
-    position: absolute;
-    top: 85vh;
     cursor: pointer;
+    margin: 0 auto;
+    display: block;
+    width: 100%;
 }
 
 .section-header {
@@ -87,10 +94,19 @@ body {
 }
 
 .projects-container {
+    margin: 0 auto;
     margin-top: 300px;
-    width: 100%;
+    width: 75%;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95vw;
     flex-wrap: wrap;
 }
 
@@ -134,26 +150,19 @@ body {
 }
 
 .project-card {
-    width: 408px;
+    width: 368px;
     border-radius: 5px;
     transition: all ease 0.2s;
     padding: 40px;
 }
 
-.tilt {
-    width: 408px;
-    border-radius: 5px;
-    margin: 0 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 50px;
-
-    transition: all 0.1s ease;
-}
-
 .project-card:hover {
     box-shadow: 0px 0px 50px 5px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+.project-card:active {
+    transform: scale(1);
 }
 
 .card-title {
@@ -195,6 +204,22 @@ body {
 .download-resume-btn:hover {
     background: var(--accent-col);
     color: var(--main-bg-col);
+    transform: scale(1.05);
+}
+.download-resume-btn:active {
+    transform: scale(1);
+}
+
+.download-resume-btn-mobile {
+    display: none;
+}
+
+.download-container {
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 @media only screen and (min-width: 500px) and (max-width: 1024px) {
@@ -253,5 +278,33 @@ body {
         width: 120px;
         height: 35px;
         font-size: 18px;
+    }
+
+    .card-container {
+        width: 95vw;
+        flex-wrap: wrap;
+    }
+
+    .download-resume-btn-mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50vw;
+        height: 33px;
+        border: 3px solid var(--accent-col);
+        font-family: "Montserrat", sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        margin: 25px auto;
+        cursor: pointer;
+        border-radius: 5px;
+        text-decoration: none;
+        color: var(--accent-col);
+        transition: all 150ms;
+        background-color: var(--main-bg-col);
+    }
+
+    .download-resume-btn-mobile:active {
+        transform: scale(0.95);
     }
 }
